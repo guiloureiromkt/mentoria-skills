@@ -1,5 +1,27 @@
 # Como instalar as skills
 
+## O jeito mais fácil: pelo Claude Code
+
+Dentro do Claude Code, digita:
+
+```
+/plugin marketplace add guiloureiromkt/mentoria-skills
+```
+
+e depois:
+
+```
+/plugin install mentoria@mentoria-skills
+```
+
+Fecha e abre o Claude Code. Acabou — sem terminal, sem baixar nada na mão.
+
+Para conferir, pergunta: *que skills você tem disponíveis?* As quatro precisam aparecer: `carrossel`, `trendseeker`, `impeccable`, `find-skills`.
+
+---
+
+## O jeito manual (se o `/plugin` não existir na tua versão)
+
 Skill é uma pasta com instruções que o Claude lê quando o assunto aparece. Instalar é copiar a pasta para o lugar certo. Não tem instalador, não tem botão: é cópia de pasta.
 
 O lugar certo é `~/.claude/skills/` — no Windows, `C:\Users\SEU-USUARIO\.claude\skills\`.
@@ -10,12 +32,12 @@ Abre o terminal e cola:
 
 **Mac ou Linux**
 ```bash
-git clone https://github.com/SEU-USUARIO/skills-iza.git ~/skills-iza && bash ~/skills-iza/instalar.sh
+git clone https://github.com/guiloureiromkt/mentoria-skills.git ~/mentoria-skills && bash ~/mentoria-skills/instalar.sh
 ```
 
 **Windows (PowerShell)**
 ```powershell
-git clone https://github.com/SEU-USUARIO/skills-iza.git $HOME\skills-iza; & $HOME\skills-iza\instalar.ps1
+git clone https://github.com/guiloureiromkt/mentoria-skills.git $HOME\mentoria-skills; & $HOME\mentoria-skills\instalar.ps1
 ```
 
 Pronto. O script copia cada skill para dentro de `~/.claude/skills/` e lista o que copiou.
@@ -43,7 +65,7 @@ Se não aparecerem, quase sempre é um destes dois: a pasta foi parar num nível
 Quando eu mexer em alguma skill, você roda de novo:
 
 ```bash
-cd ~/skills-iza && git pull && bash instalar.sh
+cd ~/mentoria-skills && git pull && bash instalar.sh
 ```
 
 No Windows, `git pull` e depois `.\instalar.ps1`.
