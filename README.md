@@ -8,17 +8,25 @@ Elas existem porque eu uso na minha operação e porque os meus mentorados preci
 
 ## Instalar
 
-Dentro do Claude Code, dois comandos:
+São dois comandos, e existem duas formas de dar os mesmos dois. Escolhe uma.
+
+**Dentro do Claude Code** — digita na linha onde você conversa com ele, do mesmo jeito que digita uma pergunta:
 
 ```
 /plugin marketplace add guiloureiromkt/mentoria-skills
-```
-
-```
 /plugin install mentoria@mentoria-skills
 ```
 
-Fecha e abre o Claude Code. Pronto — sem terminal, sem copiar pasta, sem baixar ZIP.
+**Ou no terminal** — a mesma coisa, com a palavra `claude` na frente:
+
+```bash
+claude plugin marketplace add guiloureiromkt/mentoria-skills
+claude plugin install mentoria@mentoria-skills
+```
+
+⚠️ **Não misture as duas.** O comando que começa com barra (`/plugin`) só funciona dentro do Claude Code. Se você colar ele no terminal, vai dar *"arquivo ou diretório inexistente"* — o terminal procura um programa chamado `/plugin`, que não existe.
+
+Fecha e abre o Claude Code. Pronto — sem copiar pasta, sem baixar ZIP.
 
 Para conferir, pergunta ao Claude: *que skills você tem disponíveis?* As quatro têm que aparecer.
 

@@ -2,19 +2,27 @@
 
 ## O jeito mais fácil: pelo Claude Code
 
-Dentro do Claude Code, digita:
+Digita estes dois **na linha onde você conversa com o Claude**, igual a qualquer pergunta:
 
 ```
 /plugin marketplace add guiloureiromkt/mentoria-skills
-```
-
-e depois:
-
-```
 /plugin install mentoria@mentoria-skills
 ```
 
-Fecha e abre o Claude Code. Acabou — sem terminal, sem baixar nada na mão.
+Fecha e abre o Claude Code. Acabou — sem baixar nada na mão.
+
+### ⚠️ O tropeço mais comum
+
+Comando que começa com **barra** (`/plugin`) só existe **dentro do Claude Code**. Colado no terminal, ele devolve *"arquivo ou diretório inexistente"*, porque o terminal sai procurando um programa chamado `/plugin`.
+
+Se você prefere o terminal, os mesmos dois comandos existem lá, com a palavra `claude` na frente:
+
+```bash
+claude plugin marketplace add guiloureiromkt/mentoria-skills
+claude plugin install mentoria@mentoria-skills
+```
+
+Um ou outro. Nunca os dois.
 
 Para conferir, pergunta: *que skills você tem disponíveis?* As quatro precisam aparecer: `carrossel`, `trendseeker`, `impeccable`, `find-skills`.
 
