@@ -16,10 +16,26 @@
       "source": "./",
       "category": "productivity",
       "dependencies": [
-        "ui-ux-pro-max@ui-ux-pro-max-skill",
-        "taste-skill@taste-skill",
-        "example-skills@anthropic-agent-skills",
-        "frontend-slides@frontend-slides"
+        {
+          "name": "ui-ux-pro-max",
+          "marketplace": "ui-ux-pro-max-skill",
+          "source": "nextlevelbuilder/ui-ux-pro-max-skill"
+        },
+        {
+          "name": "taste-skill",
+          "marketplace": "taste-skill",
+          "source": "Leonxlnx/taste-skill"
+        },
+        {
+          "name": "example-skills",
+          "marketplace": "anthropic-agent-skills",
+          "source": "anthropics/skills"
+        },
+        {
+          "name": "frontend-slides",
+          "marketplace": "frontend-slides",
+          "source": "zarazhangrui/frontend-slides"
+        }
       ]
     }
   ],
