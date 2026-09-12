@@ -60,7 +60,9 @@ Cria, critica, audita e melhora página e site. É a que te tira do resultado "l
 
 ### 🔎 `find-skills` — acha o que falta
 
-Quando você precisa de uma skill que não está aqui, pede: *acha uma skill pra editar vídeo*. Ela procura no ecossistema aberto e instala a escolhida.
+Quando você precisa de uma skill que não está aqui, pede: *acha uma skill pra editar vídeo*. Ela procura no ecossistema aberto (o índice em [skills.sh](https://www.skills.sh)) e instala a escolhida.
+
+É da **Vercel Labs**, sob MIT, copiada sem modificação — origem e licença em [skills/find-skills/ORIGEM.md](skills/find-skills/ORIGEM.md).
 
 ---
 
@@ -77,4 +79,6 @@ E em **[docs/03-mais-skills.md](docs/03-mais-skills.md)**: `deep-research` (pesq
 
 `carrossel` e `trendseeker` são minhas, sob MIT — usa, muda, leva pra onde quiser.
 
-`impeccable` é de terceiro, sob Apache 2.0, com a licença original preservada dentro da pasta. `find-skills` vem do ecossistema aberto de Agent Skills, redistribuída sem modificação.
+`impeccable` é de terceiro, sob Apache 2.0, com a licença original preservada dentro da pasta.
+
+`find-skills` é da [Vercel Labs](https://github.com/vercel-labs/skills), sob MIT, redistribuída sem modificação, com a licença original e a nota de origem dentro da pasta.
