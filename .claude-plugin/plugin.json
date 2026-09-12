@@ -2,8 +2,33 @@
   "name": "mentoria",
   "description": "As ferramentas da Mentoria Mão na Massa: carrossel de Instagram com a tua arte, varredura semanal do teu mercado, design de site que não sai genérico. Por Gui Loureiro.",
   "version": "1.0.0",
-  "author": { "name": "Gui Loureiro", "url": "https://guiloureiro.com.br" },
+  "author": {
+    "name": "Gui Loureiro",
+    "url": "https://guiloureiro.com.br"
+  },
   "homepage": "https://github.com/guiloureiromkt/mentoria-skills",
   "license": "MIT",
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "dependencies": [
+    {
+      "name": "ui-ux-pro-max",
+      "marketplace": "ui-ux-pro-max-skill",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill"
+    },
+    {
+      "name": "taste-skill",
+      "marketplace": "taste-skill",
+      "source": "Leonxlnx/taste-skill"
+    },
+    {
+      "name": "example-skills",
+      "marketplace": "anthropic-agent-skills",
+      "source": "anthropics/skills"
+    },
+    {
+      "name": "frontend-slides",
+      "marketplace": "frontend-slides",
+      "source": "zarazhangrui/frontend-slides"
+    }
+  ]
 }
