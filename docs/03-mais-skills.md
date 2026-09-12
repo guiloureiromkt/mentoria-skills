@@ -17,13 +17,9 @@ git clone https://github.com/199-biotechnologies/claude-deep-research-skill.git 
 
 Depois é só pedir: "faz uma pesquisa profunda sobre o mercado de odontopediatria em Uberlândia".
 
-## taste — outro repertório visual
+## As de design já vêm no pacote
 
-Onze variações de estilo (brutalista, minimalista, soft, redesenho de página existente, imagem virando código). Serve quando o resultado saiu "legalzinho mas genérico" e você quer empurrar para outro lugar.
-
-```bash
-git clone https://github.com/Leonxlnx/taste-skill.git ~/.claude/skills/taste
-```
+`ui-ux-pro-max`, `taste`, `frontend-design` e `frontend-slides` são dependências declaradas do `mentoria` e instalam junto. Não precisa fazer nada além do que está em [00-como-instalar.md](00-como-instalar.md).
 
 ## As minhas, do marketplace
 

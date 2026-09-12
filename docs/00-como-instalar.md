@@ -2,31 +2,36 @@
 
 ## O jeito mais fácil: pelo Claude Code
 
-Digita estes dois **na linha onde você conversa com o Claude**, igual a qualquer pergunta:
+São cinco marketplaces e uma instalação. O comando de instalar puxa os outros quatro sozinho, então adiciona os cinco primeiro e instala por último.
+
+Digita **na linha onde você conversa com o Claude**, um de cada vez:
 
 ```
+/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
+/plugin marketplace add Leonxlnx/taste-skill
+/plugin marketplace add anthropics/skills
+/plugin marketplace add zarazhangrui/frontend-slides
 /plugin marketplace add guiloureiromkt/mentoria-skills
 /plugin install mentoria@mentoria-skills
 ```
 
-Fecha e abre o Claude Code. Acabou — sem baixar nada na mão.
+A última linha tem que responder `Successfully installed plugin: mentoria@mentoria-skills (+ 4 dependencies)`. Se disser `Dependency ... not found. Is the marketplace added?`, é porque faltou um dos cinco primeiros.
+
+Fecha e abre o Claude Code. Pergunta: *que skills você tem disponíveis?*
+
+## Ou no terminal, numa linha só
+
+Se preferir resolver de uma vez, cola isso no terminal:
+
+```bash
+claude plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill && claude plugin marketplace add Leonxlnx/taste-skill && claude plugin marketplace add anthropics/skills && claude plugin marketplace add zarazhangrui/frontend-slides && claude plugin marketplace add guiloureiromkt/mentoria-skills && claude plugin install mentoria@mentoria-skills -y
+```
 
 ### ⚠️ O tropeço mais comum
 
-Comando que começa com **barra** (`/plugin`) só existe **dentro do Claude Code**. Colado no terminal, ele devolve *"arquivo ou diretório inexistente"*, porque o terminal sai procurando um programa chamado `/plugin`.
+Comando que começa com **barra** (`/plugin`) só existe **dentro do Claude Code**. Colado no terminal, ele devolve *"arquivo ou diretório inexistente"*, porque o terminal sai procurando um programa chamado `/plugin`. No terminal, os mesmos comandos existem com a palavra `claude` na frente.
 
-Se você prefere o terminal, os mesmos dois comandos existem lá, com a palavra `claude` na frente:
-
-```bash
-claude plugin marketplace add guiloureiromkt/mentoria-skills
-claude plugin install mentoria@mentoria-skills
-```
-
-Um ou outro. Nunca os dois.
-
-Para conferir, pergunta: *que skills você tem disponíveis?* As quatro precisam aparecer: `carrossel`, `trendseeker`, `impeccable`, `find-skills`.
-
----
+Um caminho ou outro. Nunca os dois.
 
 ## O jeito manual (se o `/plugin` não existir na tua versão)
 

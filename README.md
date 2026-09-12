@@ -8,29 +8,30 @@ Elas existem porque eu uso na minha operação e porque os meus mentorados preci
 
 ## Instalar
 
-São dois comandos, e existem duas formas de dar os mesmos dois. Escolhe uma.
+São cinco marketplaces e um comando de instalação. O último puxa os outros quatro sozinho, então a ordem importa: adiciona os cinco primeiro, instala por último.
 
-**Dentro do Claude Code** — digita na linha onde você conversa com ele, do mesmo jeito que digita uma pergunta:
+**Dentro do Claude Code** (digita na linha onde você conversa com ele, um de cada vez):
 
 ```
+/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
+/plugin marketplace add Leonxlnx/taste-skill
+/plugin marketplace add anthropics/skills
+/plugin marketplace add zarazhangrui/frontend-slides
 /plugin marketplace add guiloureiromkt/mentoria-skills
 /plugin install mentoria@mentoria-skills
 ```
 
-**Ou no terminal** — a mesma coisa, com a palavra `claude` na frente:
+**Ou no terminal, numa linha só** (copia e cola inteiro):
 
 ```bash
-claude plugin marketplace add guiloureiromkt/mentoria-skills
-claude plugin install mentoria@mentoria-skills
+claude plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill && claude plugin marketplace add Leonxlnx/taste-skill && claude plugin marketplace add anthropics/skills && claude plugin marketplace add zarazhangrui/frontend-slides && claude plugin marketplace add guiloureiromkt/mentoria-skills && claude plugin install mentoria@mentoria-skills -y
 ```
 
-⚠️ **Não misture as duas.** O comando que começa com barra (`/plugin`) só funciona dentro do Claude Code. Se você colar ele no terminal, vai dar *"arquivo ou diretório inexistente"* — o terminal procura um programa chamado `/plugin`, que não existe.
+No fim, a mensagem tem que dizer `Successfully installed plugin: mentoria@mentoria-skills (+ 4 dependencies)`.
 
-Fecha e abre o Claude Code. Pronto — sem copiar pasta, sem baixar ZIP.
+⚠️ **Não misture os dois.** Comando que começa com barra (`/plugin`) só funciona dentro do Claude Code. Colado no terminal, devolve *"arquivo ou diretório inexistente"*.
 
-Para conferir, pergunta ao Claude: *que skills você tem disponíveis?* As quatro têm que aparecer.
-
-Se preferir instalar na mão, ou se o `/plugin` não estiver disponível na tua versão, o caminho por cópia de pasta está em [docs/00-como-instalar.md](docs/00-como-instalar.md).
+Fecha e abre o Claude Code, e pergunta: *que skills você tem disponíveis?*
 
 ---
 
@@ -57,6 +58,15 @@ Para quem atende profissão regulamentada, ela vigia o que quase ninguém acompa
 ### 🎨 `impeccable` — design de site que não sai genérico
 
 Cria, critica, audita e melhora página e site. É a que te tira do resultado "legalzinho mas parece template". Skill de terceiro, Apache 2.0, redistribuída aqui sem modificação.
+
+### 🎯 As de design que vêm junto (as dependências)
+
+Instalam com o mesmo comando, e cada uma tem dono próprio:
+
+- **`ui-ux-pro-max`** ([nextlevelbuilder](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), MIT) — banco de 67 estilos de interface, 161 paletas, 57 pares de fonte e 99 diretrizes de UX, com checagem de contraste, área de toque e acessibilidade. É a mais completa do pacote pra decisão visual.
+- **`taste`** ([Leonxlnx](https://github.com/Leonxlnx/taste-skill), MIT) — onze recortes de estilo: brutalista, minimalista, soft, redesenho de página existente, imagem virando código. É a que você chama quando o resultado saiu correto e sem graça.
+- **`frontend-design`** (Anthropic, Apache 2.0) — interfaces de produção sem cara de template. Vem dentro do `example-skills`, que traz junto `brand-guidelines`, `canvas-design`, `theme-factory` e `webapp-testing`.
+- **`frontend-slides`** ([zarazhangrui](https://github.com/zarazhangrui/frontend-slides), MIT) — apresentação em HTML com animação, do zero ou convertendo um PowerPoint que você já tem. Zero dependência: um arquivo só que abre no navegador.
 
 ### 🔎 `find-skills` — acha o que falta
 
