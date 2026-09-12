@@ -22,5 +22,11 @@
         "frontend-slides@frontend-slides"
       ]
     }
+  ],
+  "allowCrossMarketplaceDependenciesOn": [
+    "ui-ux-pro-max-skill",
+    "taste-skill",
+    "anthropic-agent-skills",
+    "frontend-slides"
   ]
 }
