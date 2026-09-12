@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!-- Troque as fontes pelas da marca (Google Fonts) -->
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=ABeeZee:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  /* ===== AS ÚNICAS LINHAS QUE VOCÊ TROCA POR PROJETO ===== */
+  :root{
+    --base:#0B0710;          /* fundo */
+    --acento:#E62B54;        /* cor de destaque */
+    --claro:#F2E9D6;         /* texto */
+    --disp:'Anta',system-ui,sans-serif;
+    --body:'ABeeZee',Georgia,serif;
+    --mono:'JetBrains Mono',monospace;
+  }
+  /* ====================================================== */
+
+  :root{
+    --dim:color-mix(in srgb,var(--claro) 74%,transparent);
+    --faint:color-mix(in srgb,var(--claro) 42%,transparent);
+    --ac-glow:color-mix(in srgb,var(--acento) 45%,transparent);
+    --ac-soft:color-mix(in srgb,var(--acento) 13%,transparent);
+    --ac-line:color-mix(in srgb,var(--acento) 55%,transparent);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#000}
+  .slide{position:relative;width:1080px;height:1350px;overflow:hidden;
+    background:var(--base);color:var(--claro);font-family:var(--body)}
+
+  /* assinatura, igual em todo slide */
+  .head{position:absolute;top:50px;left:84px;right:84px;display:flex;
+    justify-content:space-between;align-items:center;z-index:6}
+  .head .brand{display:flex;align-items:center;gap:15px}
+  .head .mk{width:54px;height:54px;border-radius:14px;border:2px solid var(--acento);
+    background-size:cover;background-position:center top;box-shadow:0 0 18px var(--ac-glow);flex:0 0 auto}
+  .head .hd{font-family:var(--mono);font-size:21px;color:var(--dim);letter-spacing:.03em}
+  .head .hd b{color:var(--claro);font-weight:700}
+  .head .num{font-family:var(--mono);font-size:21px;color:var(--faint);letter-spacing:.1em}
+
+  /* tipografia */
+  .kick{font-family:var(--mono);font-size:23px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--acento);margin-bottom:26px}
+  h1{font-family:var(--disp);font-weight:400;text-transform:uppercase;line-height:1;
+    letter-spacing:-.01em;font-size:78px;color:var(--claro)}
+  h1.sm{font-size:66px}
+  h1 .r{color:var(--acento)}
+  .body{font-family:var(--body);font-size:37px;line-height:1.38;color:var(--dim);margin-top:30px}
+  .body b{color:var(--claro)}
+  .cite{font-family:var(--mono);font-size:22px;color:var(--dim);margin-top:28px}
+  .pill{display:inline-block;font-family:var(--mono);font-size:24px;line-height:1.45;
+    padding:22px 30px;border-radius:16px;border:1px solid var(--ac-line);
+    background:var(--ac-soft);color:var(--claro);margin-top:34px}
+  .pill b{color:var(--acento)}
+
+  /* zonas de arte */
+  .art{position:absolute;background-size:cover;background-position:center;z-index:1}
+  .rule{position:absolute;background:var(--acento);box-shadow:0 0 20px var(--ac-glow);z-index:3}
+
+  .l-bottom .txt{position:absolute;top:128px;left:84px;right:84px}
+  .l-bottom .art{left:0;right:0;bottom:0;height:54%}
+  .l-bottom .rule{left:84px;right:84px;top:46%;height:3px}
+  .l-bottom .art::before{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,var(--base) 0%,transparent 12%)}
+
+  .l-right .txt{position:absolute;top:50%;transform:translateY(-50%);left:84px;width:560px;z-index:2}
+  .l-right .art{top:0;bottom:0;right:0;width:46%}
+  .l-right .rule{top:0;bottom:0;left:54%;width:3px}
+  .l-right .art::before{content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg,var(--base) 0%,transparent 16%)}
+
+  .l-left .txt{position:absolute;top:50%;transform:translateY(-50%);right:84px;width:560px;
+    text-align:right;z-index:2}
+  .l-left .art{top:0;bottom:0;left:0;width:46%}
+  .l-left .rule{top:0;bottom:0;left:46%;width:3px}
+  .l-left .art::before{content:"";position:absolute;inset:0;
+    background:linear-gradient(270deg,var(--base) 0%,transparent 16%)}
+
+  .l-type .txt{position:absolute;top:50%;transform:translateY(-50%);left:84px;right:84px}
+
+  /* rodapé e conformidade */
+  .foot{position:absolute;left:84px;bottom:74px;font-family:var(--mono);font-size:21px;
+    color:var(--faint);letter-spacing:.06em;z-index:5}
+  .swipe{position:absolute;right:84px;bottom:74px;font-family:var(--mono);font-size:21px;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--acento);z-index:5}
+  /* linha exigida por conselho profissional (CRM+RQE, CRO, CRP). Apaga se não se aplica. */
+  .compliance{position:absolute;left:84px;right:84px;bottom:34px;font-family:var(--mono);
+    font-size:17px;color:var(--faint);letter-spacing:.04em;z-index:7}
+
+  /* listas e contrastes */
+  .vs{font-family:var(--disp);font-size:74px;text-transform:uppercase;line-height:1.1;
+    letter-spacing:-.01em;color:var(--dim)}
+  .vs .r{color:var(--acento)} .vs+.vs{margin-top:34px}
+  .case{display:flex;align-items:baseline;gap:22px;padding:22px 0;
+    border-bottom:1px solid color-mix(in srgb,var(--claro) 16%,transparent)}
+  .case .big{font-family:var(--disp);font-size:56px;color:var(--acento);line-height:1;white-space:nowrap}
+  .case .lab{font-family:var(--body);font-size:31px;color:var(--dim);line-height:1.2}
+  .case .lab b{color:var(--claro)}
+  .act{display:flex;align-items:center;gap:20px;font-family:var(--body);font-size:35px;
+    color:var(--claro);padding:20px 0;border-bottom:1px solid color-mix(in srgb,var(--claro) 14%,transparent)}
+  .act .ic{width:56px;height:56px;border-radius:14px;background:var(--ac-soft);
+    border:1px solid var(--ac-line);display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-size:28px;color:var(--acento);flex:0 0 auto}
+  .act b{color:var(--acento)}
+
+  /* capa */
+  .cover{display:flex;flex-direction:column}
+  .cover .bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;
+    background-image:url('arte/capa.png')}
+  .cover .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,
+    var(--base) 0%, color-mix(in srgb,var(--base) 93%,transparent) 28%,
+    color-mix(in srgb,var(--base) 78%,transparent) 40%,
+    color-mix(in srgb,var(--base) 32%,transparent) 50%,
+    color-mix(in srgb,var(--base) 5%,transparent) 60%,
+    color-mix(in srgb,var(--base) 12%,transparent) 74%,
+    color-mix(in srgb,var(--base) 72%,transparent) 100%)}
+  .cover .cap{position:absolute;top:128px;left:84px;right:84px;z-index:4}
+  .cover h1{font-size:84px}
+  .cover .subc{font-family:var(--disp);font-size:62px;text-transform:uppercase;color:var(--acento);
+    line-height:1.02;margin-top:14px}
+</style>
+</head>
+<body>
+
+<!-- 01 · CAPA — full-bleed, a única -->
+<section class="slide cover">
+  <div class="bg"></div>
+  <div class="head">
+    <div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+      <span class="hd">@<b>arroba</b></span></div>
+    <span class="num">01 / 10</span>
+  </div>
+  <div class="cap">
+    <h1>O GANCHO QUE FAZ<br>PARAR O DEDO</h1>
+    <div class="subc">a segunda linha, no acento</div>
+  </div>
+  <div class="swipe">arrasta →</div>
+</section>
+
+<!-- 02 · A CRENÇA COMUM — tipográfico -->
+<section class="slide l-type">
+  <div class="head"><div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+    <span class="hd">@<b>arroba</b></span></div><span class="num">02 / 10</span></div>
+  <div class="txt">
+    <div class="kick">o que todo mundo acredita</div>
+    <h1>A FRASE QUE A PESSOA<br>CARREGA <span class="r">SEM PENSAR</span></h1>
+    <p class="body">Dois ou três períodos curtos abrindo a cena. Concreto, nada de abstração.</p>
+  </div>
+</section>
+
+<!-- 03 · O PROBLEMA — arte na faixa inferior -->
+<section class="slide l-bottom">
+  <div class="head"><div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+    <span class="hd">@<b>arroba</b></span></div><span class="num">03 / 10</span></div>
+  <div class="txt">
+    <div class="kick">o problema de verdade</div>
+    <h1 class="sm">POR QUE AQUILO<br>NÃO FUNCIONA</h1>
+    <p class="body">A explicação em uma ou duas frases. <b>O que importa fica em destaque.</b></p>
+  </div>
+  <div class="rule"></div>
+  <div class="art" style="background-image:url('arte/slide-3.png')"></div>
+</section>
+
+<!-- 04 · A NUANCE — tipográfico -->
+<section class="slide l-type">
+  <div class="head"><div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+    <span class="hd">@<b>arroba</b></span></div><span class="num">04 / 10</span></div>
+  <div class="txt">
+    <div class="kick">a armadilha</div>
+    <h1 class="sm">O QUE QUASE NINGUÉM<br>ENXERGA AQUI</h1>
+    <p class="body">A nuance. Este é o slide que separa quem sabe do assunto de quem repete o que ouviu.</p>
+    <div class="pill">Um destaque curto, quando couber. <b>Números reais só.</b></div>
+  </div>
+</section>
+
+<!-- 05 · A EVIDÊNCIA — arte à esquerda -->
+<section class="slide l-left">
+  <div class="head"><div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+    <span class="hd">@<b>arroba</b></span></div><span class="num">05 / 10</span></div>
+  <div class="art" style="background-image:url('arte/slide-5.png')"></div>
+  <div class="rule"></div>
+  <div class="txt">
+    <div class="kick">a evidência</div>
+    <h1 class="sm">O NÚMERO<br>QUE PROVA</h1>
+    <p class="body">Só entra dado que está no material de origem.</p>
+    <p class="cite">fonte: quem disse, quando</p>
+  </div>
+</section>
+
+<!-- 06 · A VIRADA — tipográfico -->
+<section class="slide l-type">
+  <div class="head"><div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+    <span class="hd">@<b>arroba</b></span></div><span class="num">06 / 10</span></div>
+  <div class="txt">
+    <div class="kick">mas</div>
+    <h1>O FURO MAIOR<br>É <span class="r">OUTRO</span></h1>
+    <p class="body">A virada reenquadra o problema. É o slide que faz a pessoa continuar.</p>
+  </div>
+</section>
+
+<!-- 07 · O INSIGHT — arte à direita -->
+<section class="slide l-right">
+  <div class="head"><div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+    <span class="hd">@<b>arroba</b></span></div><span class="num">07 / 10</span></div>
+  <div class="txt">
+    <div class="kick">o insight</div>
+    <h1 class="sm">A TESE QUE<br>RESOLVE</h1>
+    <p class="body">A ideia central do carrossel, dita da forma mais simples possível.</p>
+  </div>
+  <div class="rule"></div>
+  <div class="art" style="background-image:url('arte/slide-7.png')"></div>
+</section>
+
+<!-- 08 · A ALAVANCA — no máximo um contraste binário por carrossel -->
+<section class="slide l-type">
+  <div class="head"><div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+    <span class="hd">@<b>arroba</b></span></div><span class="num">08 / 10</span></div>
+  <div class="txt">
+    <div class="kick">o que muda na prática</div>
+    <div class="vs">ISSO É <span class="r">UMA COISA</span></div>
+    <div class="vs">AQUILO É <span class="r">OUTRA</span></div>
+    <p class="body">Uma frase fechando o contraste.</p>
+  </div>
+</section>
+
+<!-- 09 · O TESTE — arte à esquerda -->
+<section class="slide l-left">
+  <div class="head"><div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+    <span class="hd">@<b>arroba</b></span></div><span class="num">09 / 10</span></div>
+  <div class="art" style="background-image:url('arte/slide-9.png')"></div>
+  <div class="rule"></div>
+  <div class="txt">
+    <div class="kick">o teste</div>
+    <h1 class="sm">A PERGUNTA<br>QUE DÓI</h1>
+    <p class="body">E como aplicar amanhã de manhã.</p>
+  </div>
+</section>
+
+<!-- 10 · FECHO -->
+<section class="slide l-type">
+  <div class="head"><div class="brand"><span class="mk" style="background-image:url('arte/avatar.png')"></span>
+    <span class="hd">@<b>arroba</b></span></div><span class="num">10 / 10</span></div>
+  <div class="txt">
+    <h1 class="sm">A FRASE<br>QUE FICA</h1>
+    <div class="act"><span class="ic">★</span><span>Salva pra consultar depois</span></div>
+    <div class="act"><span class="ic">+</span><span>Segue pra ver o resto</span></div>
+    <div class="act"><span class="ic">↗</span><span><b>Link no primeiro comentário</b></span></div>
+  </div>
+  <!-- Apague se o cliente não responde a conselho profissional -->
+  <div class="compliance">Dr. Nome Sobrenome · CRM 00000/UF · RQE 0000</div>
+</section>
+
+</body>
+</html>
