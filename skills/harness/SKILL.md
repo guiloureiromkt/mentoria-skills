@@ -1,6 +1,6 @@
 ---
 name: harness
-description: Entrevista que preenche a ficha de 10 campos de um harness (ambiente fechado para um propósito só) e escreve o CLAUDE.md do harness e o intent/<nome>.md no formato do cycle. Use quando pedir "monta o harness de X", "ficha do harness", "quero fechar um ambiente pra isso", "que agentes e fontes esse projeto precisa", ou antes de rodar /cycle:init num repositório novo. Não constrói o harness, não instala skill, não cria loop: entrega a ficha, o arquivo mãe e o intent, que são o que decide tudo depois.
+description: Entrevista que preenche a ficha de 10 campos de um harness (ambiente fechado para um propósito só) e escreve o CLAUDE.md do harness e o intent/<nome>.md no formato do cycle. Use quando pedir "monta o harness de X", "ficha do harness", "quero fechar um ambiente pra isso", "que agentes e fontes esse projeto precisa", ou antes de rodar /cycle:init num repositório novo. Não constrói o harness, não instala skill, não cria loop. Entrega a ficha, o arquivo mãe e o intent, que são o que decide tudo depois.
 ---
 
 # Harness — a ficha que vira ambiente
