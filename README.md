@@ -55,6 +55,14 @@ Ela busca priorizando fonte primária, filtra cada sinal por sete lentes, **desc
 
 Para quem atende profissão regulamentada, ela vigia o que quase ninguém acompanha: mudança de norma dos conselhos. Uma linha numa resolução reescreve como uma categoria inteira comunica.
 
+### 🧱 `mentoria:harness` — a ficha que fecha um ambiente
+
+Um **harness** é uma pasta fechada para um propósito só: só os agentes, skills, loops, dados e pessoas daquele trabalho entram; o resto do teu segundo cérebro fica fora. É o que impede a IA de misturar a Carol do financeiro com a Carol do conteúdo, e o que permite dar acesso a outra pessoa sem entregar tudo.
+
+Esta skill **entrevista você pelos dez campos da ficha** (propósito, método, peças, comprar ou construir, fontes, conectores, interface, hospedagem, acesso, custo) e escreve três arquivos: a ficha, o `CLAUDE.md` do harness e o `intent/` no formato do cycle. Uma pergunta por vez, com a resposta recomendada. Fato ela não pergunta: olha os loops e arquivos que já existem e confirma.
+
+Ela não constrói nada. O par dela é o [template de harness](https://github.com/guiloureiromkt/harness-template): o esqueleto de pastas, permissões e fila de aprovação. A ficha diz o que vai dentro; o template é a caixa.
+
 ### 🎨 `impeccable` — design de site que não sai genérico
 
 Cria, critica, audita e melhora página e site. É a que te tira do resultado "legalzinho mas parece template". Skill de terceiro, Apache 2.0, redistribuída aqui sem modificação.
