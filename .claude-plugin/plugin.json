@@ -1,7 +1,7 @@
 {
   "name": "mentoria",
-  "description": "As ferramentas da Mentoria Mão na Massa: carrossel de Instagram com a tua arte, varredura semanal do teu mercado, design de site que não sai genérico, a ficha que fecha um harness, e a fila de aprovação que deixa um loop agir no mundo sem ninguém no teclado. Por Gui Loureiro.",
-  "version": "1.2.0",
+  "description": "As ferramentas da Mentoria Mão na Massa: carrossel de Instagram com a tua arte, varredura semanal do teu mercado, design de site que não sai genérico, a ficha que fecha um harness, a fila de aprovação que deixa um loop agir no mundo sem ninguém no teclado, e o retro semanal de tokens que acha o que se repete e vale virar skill. Por Gui Loureiro.",
+  "version": "1.3.0",
   "author": {
     "name": "Gui Loureiro",
     "url": "https://guiloureiro.com.br"

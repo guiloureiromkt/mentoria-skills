@@ -69,6 +69,10 @@ Um loop que age sozinho no mundo não merece confiança; um loop que para e espe
 
 Vem com `scripts/fila.py`, que lista a fila (pendente, vencido, aprovado, executado, concluído) sem gastar token. É a peça que o [template de harness](https://github.com/guiloureiromkt/harness-template) já espera nas pastas `aprovar/` e `aprovado/`.
 
+### 📉 `mentoria:retro-de-tokens` — o que se repete vale virar skill
+
+A pergunta não é "quanto gastei", é **"o que eu fiz três vezes na semana, na mão, que podia ser uma skill de uma linha?"**. O script lê o [ccusage](https://github.com/ryoppippi/ccusage) (ferramenta aberta que soma o uso do Claude Code na tua máquina) e devolve, sem gastar token: a semana contra a anterior, por dia, por projeto, e as sessões mais caras com a primeira frase que você digitou em cada uma. A skill lê isso, acha o que se repetiu, e propõe **uma** coisa para virar skill, template ou arquivo de contexto, com a economia estimada. Relatório de uma página, uma vez por semana. Não muda nada, não apaga nada, não manda nada para fora.
+
 ### 🎨 `impeccable` — design de site que não sai genérico
 
 Cria, critica, audita e melhora página e site. É a que te tira do resultado "legalzinho mas parece template". Skill de terceiro, Apache 2.0, redistribuída aqui sem modificação.

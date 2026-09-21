@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "mentoria",
-      "description": "mentoria:carrossel monta o carrossel de 10 slides e deixa a arte com você. mentoria:trendseeker varre o teu mercado toda semana e devolve o que mudou, com fonte e data. mentoria:harness preenche a ficha de um ambiente fechado e escreve o arquivo mãe e o intent. mentoria:fila-de-aprovacao faz um loop propor por escrito, uma pessoa aprovar, e outro agente conferir antes de qualquer ação para fora. Acompanham as skills de design de site e de descoberta de novas skills.",
+      "description": "mentoria:carrossel monta o carrossel de 10 slides e deixa a arte com você. mentoria:trendseeker varre o teu mercado toda semana e devolve o que mudou, com fonte e data. mentoria:harness preenche a ficha de um ambiente fechado e escreve o arquivo mãe e o intent. mentoria:fila-de-aprovacao faz um loop propor por escrito, uma pessoa aprovar, e outro agente conferir antes de qualquer ação para fora. Acompanham as skills de design de site e de descoberta de novas skills. mentoria:retro-de-tokens lê o ccusage toda semana e propõe a repetição que vale virar skill.",
       "author": {
         "name": "Gui Loureiro"
       },
