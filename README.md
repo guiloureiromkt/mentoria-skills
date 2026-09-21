@@ -63,6 +63,12 @@ Esta skill **entrevista você pelos dez campos da ficha** (propósito, método, 
 
 Ela não constrói nada. O par dela é o [template de harness](https://github.com/guiloureiromkt/harness-template): o esqueleto de pastas, permissões e fila de aprovação. A ficha diz o que vai dentro; o template é a caixa.
 
+### ✅ `mentoria:fila-de-aprovacao` — o loop propõe, você aprova, outro confere
+
+Um loop que age sozinho no mundo não merece confiança; um loop que para e espera você na frente do computador não roda de madrugada. A fila fica no meio, e é só arquivo: **o loop escreve o pedido em `aprovar/`** (ação, alvo, motivo com o número de origem, se é reversível, prazo); **você aprova movendo para `aprovado/`** com seu nome e a data, pelo GitHub, pelo Drive ou pelo Obsidian; **a skill executa só o que está aprovado**, exatamente como está escrito, guarda a evidência, e **chama um verificador em contexto separado** para conferir que o feito é o aprovado. Prazo vencido não executa. Dinheiro nunca é automático: ela prepara e para.
+
+Vem com `scripts/fila.py`, que lista a fila (pendente, vencido, aprovado, executado, concluído) sem gastar token. É a peça que o [template de harness](https://github.com/guiloureiromkt/harness-template) já espera nas pastas `aprovar/` e `aprovado/`.
+
 ### 🎨 `impeccable` — design de site que não sai genérico
 
 Cria, critica, audita e melhora página e site. É a que te tira do resultado "legalzinho mas parece template". Skill de terceiro, Apache 2.0, redistribuída aqui sem modificação.
